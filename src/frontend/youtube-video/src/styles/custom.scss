@@ -1,0 +1,12 @@
+@import 'variables';
+
+@import '~bootstrap/scss/bootstrap';
+
+@import 'modal';
+@import 'reactDatePicker';
+
+//Custom classes
+
+.fill-primary {
+  fill: $primary;
+}

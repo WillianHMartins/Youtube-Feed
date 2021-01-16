@@ -1,0 +1,81 @@
+{
+    "name": "youtube-video",
+    "version": "1.0.0",
+    "author": "guligon90",
+    "license": "UNLICENSED",
+    "scripts": {
+        "start": "nodemon --legacy-watch src/index.js",
+        "build": "npm build .",
+        "debug": "nodemon --legacy-watch --inspect=0.0.0.0:9229 src/index.js",
+        "test": "jest",
+        "licenses:check": "license-to-fail",
+        "lint": "eslint --fix src && prettier --write \"{src,config}/**/*.js\"",
+        "lint:check": "eslint src && prettier --check \"{src,config}/**/*.js\""
+    },
+    "license-to-fail": {
+        "ignoreDevDependencies": true,
+        "allowedLicenses": [
+            "Apache",
+            "BSD",
+            "ISC",
+            "MIT",
+            "Public Domain",
+            "Unlicense",
+            "WTFPL",
+            "zlib"
+        ]
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "bluebird": "^3.7.1",
+        "config": "^3.2.4",
+        "date-fns": "^2.8.1",
+        "debug-logger": "^0.4.1",
+        "faker": "^4.1.0",
+        "googleapis": "^52.1.0",
+        "http": "^0.0.0",
+        "jsonwebtoken": "^8.5.1",
+        "koa": "^2.11.0",
+        "koa-bodyparser": "^4.2.1",
+        "koa-convert": "^1.2.0",
+        "koa-helmet": "^5.2.0",
+        "koa-jwt": "^3.6.0",
+        "koa-logger": "^3.2.1",
+        "koa-mount": "^4.0.0",
+        "koa-response-time": "^2.1.0",
+        "koa-router": "^7.4.0",
+        "languagedetect": "^2.0.0",
+        "lodash": "^4.17.19",
+        "node-fetch": "^2.6.0",
+        "nodemon": "^2.0.2",
+        "pg": "^8.2.1",
+        "retry-as-promised": "^3.2.0",
+        "sequelize": "^5.21.3",
+        "stopword": "^1.0.1"
+    },
+    "devDependencies": {
+        "eslint-config-node": "^4.0.0",
+        "eslint-config-prettier": "^6.7.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jest": "^23.0.4",
+        "eslint-plugin-node": "^10.0.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "jest": "^24.9.0",
+        "koa-static": "^5.0.0",
+        "license-to-fail": "^3.0.0",
+        "prettier": "^1.19.1",
+        "sqlite3": "^4.1.0"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/**/*.js",
+            "!src/**/__generated__/*.js"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "node",
+        "env": {
+            "node": true
+        }
+    }
+}
